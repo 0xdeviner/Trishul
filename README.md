@@ -3,7 +3,9 @@
 ## Installation
 
 `git clone https://github.com/0xdeviner/Trishul`
+
 `sudo chmod +x Trishul/install.sh`
+
 `bash Trishul/install.sh`
 
 ## Usage:
