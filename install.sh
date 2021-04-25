@@ -112,6 +112,15 @@ chmod +x findomain
 sudo mv findomain /usr/bin
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
+#install CORScanner
+echo -e "${bold}${red}\n[+] ${end}${cyan}Installing CORScanner..!!${end}"
+git clone https://github.com/chenjj/CORScanner.git ~/tools/CORScanner
+cd ~/tools/CORScanner
+pip3 install -r requirements.txt
+cd ~/
+echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
+
+
 #install dalfox
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing dalfox..!!${end}"
 GO111MODULE=on go get -v github.com/hahwul/dalfox/v2

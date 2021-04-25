@@ -33,6 +33,10 @@ for domain in $(cat $1); do
 	echo -e "\n[+] ****************Started Directory fuzzing for $domain****************"
 	$dir/fuzzdir.sh $domain;
 	echo -e "\n[+] ****************Completed****************"
+	#cors scan
+	echo -e "\n[+] ****************Started CORS Scan for $domain****************"
+	$dir/corsy.sh $domain;
+	echo -e "\n[+] ****************Completed****************"
 	#jexboss 
 	echo -e "\n[+] ****************Started Jexboss vuln scanner for $domain****************"
 	$dir/jexboss.sh $domain;
