@@ -194,14 +194,13 @@ echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing Interlace..!!${end}"
 git clone https://github.com/codingo/Interlace.git ~/tools/Interlace
 cd ~/tools/Interlace
-python3 setup.py install
+sudo python3 setup.py install
 cd ~/
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install sqlmap
-echo -e "${bold}${red}\n[+] ${end}${cyan}Installing qsreplace..!!${end}"
-git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev ~/tools/sqlmap
-
+echo -e "${bold}${red}\n[+] ${end}${cyan}Installing sqlmap..!!${end}"
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git ~/tools/sqlmap
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 
