@@ -183,10 +183,9 @@ echo -e "${bold}${red}\n[+] ${end}${cyan}Installing JSFScan..!!${end}"
 git clone https://github.com/KathanP19/JSFScan.sh.git ~/tools/JSFScan.sh
 cd ~/tools/JSFScan.sh
 chmod +x install.sh JSFScan.sh report.sh
+./install.sh
 cd ~/tools/JSFScan.sh/tools
 chmod +x *
-cd ../
-./install.sh
 cd ~/
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
