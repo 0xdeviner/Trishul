@@ -33,8 +33,8 @@ mkdir ~/Trishul/templates/
 
 
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing go..!!${end}"
-sudo wget https://golang.org/dl/go1.16.2.linux-amd64.tar.gz;
-sudo tar -xvf go1.16.2.linux-amd64.tar.gz;
+sudo wget https://go.dev/dl/go1.20.4.linux-amd64.tar.gz;
+sudo tar -xvf go1.20.4.linux-amd64.tar.gz;
 sudo mv go /usr/local;
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -43,38 +43,38 @@ echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
 echo 'export GOPATH=$HOME/go'	>> ~/.bashrc			
 echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-sudo rm -rf go1.16.2.linux-amd64.tar.gz;
+sudo rm -rf go1.20.4.linux-amd64.tar.gz;
 sleep 2
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install subfinder
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing subfinder..!!${end}"
-GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install assetfinder
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing assetfinder..!!${end}"
-go get -u github.com/tomnomnom/assetfinder
+go install -v github.com/tomnomnom/assetfinder@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install httpx
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing httpx..!!${end}"
-GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install gau
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing gau..!!${end}"
-GO111MODULE=on go get -u -v github.com/lc/gau
+go install github.com/lc/gau/v2/cmd/gau@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install waybackurls
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing waybackurls..!!${end}"
-go get github.com/tomnomnom/waybackurls
+go install github.com/tomnomnom/waybackurls@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install gf
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing gf & Gf-Patterns..!!${end}"
-go get -u github.com/tomnomnom/gf;
+go install github.com/tomnomnom/gf@latest;
 git clone https://github.com/1ndianl33t/Gf-Patterns $dir/Gf-Patterns;
 mv $dir/Gf-Patterns/*.json ~/.gf/;
 sudo rm -r $dir/Gf-Patterns;
@@ -82,7 +82,7 @@ echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install jaeles
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing jaeles & jaeles-signatures..!!${end}"
-GO111MODULE=on go get github.com/jaeles-project/jaeles
+GO111MODULE=on go install github.com/jaeles-project/jaeles@latest
 mkdir ~/Trishul/templates/jaeles-open-signatures;
 git clone --depth=1 https://github.com/jaeles-project/jaeles-signatures ~/Trishul/templates/jaeles-open-signatures/jaeles-signatures/
 jaeles config -a reload --signDir ~/Trishul/templates/jaeles-open-signatures/jaeles-signatures/
@@ -91,17 +91,17 @@ echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install kxss
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing kxss..!!${end}"
-go get github.com/Emoe/kxss
+go install github.com/Emoe/kxss@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install ffuf
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing ffuf..!!${end}"
-go get -u github.com/ffuf/ffuf
+go install github.com/ffuf/ffuf/v2@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install naabu
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing naabu..!!${end}"
-GO111MODULE=on go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install findomain
@@ -123,17 +123,17 @@ echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install dalfox
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing dalfox..!!${end}"
-GO111MODULE=on go get -v github.com/hahwul/dalfox/v2
+go install github.com/hahwul/dalfox/v2@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install subzy
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing subzy..!!${end}"
-go get -u -v github.com/lukasikic/subzy
+go install -v github.com/LukaSikic/subzy@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install anew
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing anew..!!${end}"
-go get -u github.com/tomnomnom/anew
+go install -v github.com/tomnomnom/anew@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install metafinder
@@ -143,7 +143,7 @@ echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install notify
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing notify..!!${end}"
-GO111MODULE=on go get -v github.com/projectdiscovery/notify/cmd/notify
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install openredirex
@@ -205,7 +205,7 @@ echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install qsreplace
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing qsreplace..!!${end}"
-go get -u github.com/tomnomnom/qsreplace
+go install github.com/tomnomnom/qsreplace@latest
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 
@@ -228,7 +228,7 @@ echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
 #install nuclei
 echo -e "${bold}${red}\n[+] ${end}${cyan}Installing nuclei..!!${end}"
-GO111MODULE=on go get -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei;
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 git clone https://github.com/projectdiscovery/nuclei-templates ~/tools/nuclei-templates;
 echo -e "${bold}${blue}\n[+] ${end}${green}Completed...!!${end}"
 
